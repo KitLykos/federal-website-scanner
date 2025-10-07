@@ -1,0 +1,71 @@
+module.exports = {
+  "site": "https://peacecorps.gov",
+  "urls": [
+    "/tonga/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/management-and-organizational-strengthening-specialist-9667br/",
+    "/what-we-do/our-mission/facts-and-figures/",
+    "/panama/",
+    "/zambia/",
+    "/ways-to-serve/service-assignments/browse-opportunities/virtual-service-pilot/co-train-agricultural-extension-staff-on-social-media-communications-9688br/",
+    "/educators-and-students/university-programs/peace-corps-prep/partner-schools/",
+    "/what-we-do/after-service/a-lifetime-of-benefits/",
+    "/namibia/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/communications-and-marketing-specialist-9594br/",
+    "/returned-volunteers/careers-and-further-education/federal-hiring-advantages/",
+    "/what-we-do/after-service/career-paths/",
+    "/how-to-apply/application-and-invitation/legal-clearance/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/laboratory-specialist-9556br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/english-language-and-business-literacy-eco-tourism-specialist-9558br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/primary-literacy-co-teacher-9534br/",
+    "/viet-nam/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-education-teaching-9505br/",
+    "/eswatini/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/adolescent-mental-health-specialist-9634br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/curriculum-officer-9656br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/university-english-education-co-teacher-9522br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/global-health-security-county-level-advisor-9555br/",
+    "/dominican-republic/",
+    "/indonesia/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/community-development-facilitator-in-coastal-resource-management-9680br/",
+    "/cambodia/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/entrepreneurship-and-small-business-advisor-9601br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/youth-development-specialistyouth-educator-9602br/",
+    "/about-the-agency/agency-jobs/positions-and-eligibility/",
+    "/ways-to-serve/service-assignments/browse-opportunities/virtual-service-pilot/strengthen-english-teacher-teaching-skills-9622br/",
+    "/ukraine/projects/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/library-officer-9635br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/environmental-education-specialist-9597br/",
+    "/moldova/living-conditions/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/community-economic-development-facilitator-9685br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/adolescent-health-promoter-9532br/",
+    "/costa-rica/projects/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/youth-development-facilitator-9663br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/virtual-service-pilot/co-facilitate-english-club-for-students-9620br/",
+    "/malawi/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/e-learningdigital-learning-specialist-9581br/",
+    "/north-macedonia/",
+    "/what-we-do/life-in-the-peace-corps/snapshots-of-service/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/youth-development-facilitator-9670br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/library-curriculum-developer-and-facilitator-9654br/",
+    "/rwanda/",
+    "/samoa/",
+    "/connect/instagram/",
+    "/connect/blog/8-things-to-do-in-college-for-a-competitive-peace-corps-application/"
+  ],
+  "scanner": {
+    "crawler": false,
+    "sitemap": false,
+    "robotsTxt": false
+  },
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--headless=new"
+    ],
+    "defaultViewport": {
+      "width": 1366,
+      "height": 768
+    }
+  }
+}

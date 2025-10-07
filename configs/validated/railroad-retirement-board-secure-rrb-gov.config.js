@@ -1,0 +1,113 @@
+module.exports = {
+  "site": "https://secure.rrb.gov",
+  "urls": [
+    "/viewaccountstatement/accountstatementintroductionpage.aspx",
+    "/viewaccountstatement/AccountStatementSessionTimedOut.aspx?LoginMode=",
+    "/mainline/retplanner/common/ErrorPage.asp",
+    "/claimsicknessbenefits/RUIANetSI3ApplicationError.aspx",
+    "/mainline/retplanner/common/ErrorPage.asp?e=2",
+    "/mainline/retplanner/common/ErrorPage.asp",
+    "/claimsicknessbenefits/RUIANetSI3SessionTimedOut.aspx?LoginMode=",
+    "/claimsicknessbenefits/RUIANetSI3SessionTimedOut.aspx?LoginMode=",
+    "/claimsicknessbenefits/RUIANetSI3SessionTimedOut.aspx?LoginMode=",
+    "/claimsicknessbenefits/RUIANetSI3SessionTimedOut.aspx?LoginMode=",
+    "/claimsicknessbenefits/RUIANetSI3SessionTimedOut.aspx?LoginMode=",
+    "/claimsicknessbenefits/RUIANetSI3SessionTimedOut.aspx?LoginMode=",
+    "/claimsicknessbenefits/RUIANetSI3SessionTimedOut.aspx?LoginMode=",
+    "/mainline/retplanner/common/ErrorPage.asp",
+    "/mainline/retplanner/common/ErrorPage.asp",
+    "/mainline/retplanner/common/ErrorPage.asp?e=2",
+    "/claimunemploymentbenefits/RUIANetUI3SessionTimedOut.aspx?LoginMode=",
+    "/claimunemploymentbenefits/RUIANetUI3SessionTimedOut.aspx?LoginMode=",
+    "/claimunemploymentbenefits/RUIANetUI3SessionTimedOut.aspx?LoginMode=",
+    "/claimunemploymentbenefits/RUIANetUI3SessionTimedOut.aspx?LoginMode=",
+    "/claimunemploymentbenefits/RUIANetUI3SessionTimedOut.aspx?LoginMode=",
+    "/claimunemploymentbenefits/RUIANetUI3SessionTimedOut.aspx?LoginMode=",
+    "/mainline/retplanner/common/ErrorPage.asp",
+    "/applyforruiabenefits/ruianet1introductionpage.aspx",
+    "/mainline/requests/rrbiservices.asp",
+    "/mainline/pinpassword/acknowledgement.asp",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/mainline/retplanner/common/errorpage.asp",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/applyforruiabenefits/RUIANetSessionTimedOut.aspx?LoginMode=",
+    "/mainline/requests/confirm.asp",
+    "/mainline/requests/review.asp",
+    "/mainline/retplanner/common/ErrorPage.asp",
+    "/claimsicknessbenefits/RUIANetSI3SessionTimedOut.aspx?LoginMode=",
+    "/error/error.asp",
+    "/mainline/retplanner/retplanner.asp",
+    "/claimunemploymentbenefits/RUIANetUI3SessionTimedOut.aspx?LoginMode="
+  ],
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--headless=new"
+    ],
+    "concurrency": 1
+  },
+  "puppeteerPageUserAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "userAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "disableThrottling": true,
+  "disableDeviceEmulation": true,
+  "lighthouseOptions": {
+    "disableStorageReset": true,
+    "disableLantern": true,
+    "throttlingMethod": "provided",
+    "onlyCategories": [
+      "accessibility",
+      "seo",
+      "best-practices"
+    ]
+  },
+  "scanner": {
+    "sitemap": "https://secure.rrb.gov/sitemap.xml",
+    "crawler": false,
+    "robotsTxt": false,
+    "maxRoutes": 100,
+    "throttle": false,
+    "skipJavascript": true,
+    "samples": 1,
+    "pageTimeout": 90000,
+    "device": "desktop",
+    "exclude": [
+      "/*.pdf",
+      "/*.asp",
+      "/*.aspx",
+      "/sample-pfs-searches",
+      "/security-guidelines-office-location",
+      "/status-indicators",
+      "/blog",
+      "/my-health/*",
+      "/my-va/*",
+      "/auth/*",
+      "/profile/*",
+      "/logout",
+      "**/callback*",
+      "**/login*",
+      "**/signin*"
+    ]
+  },
+  "ci": {
+    "skipMissing": true,
+    "skipRoutesWithoutResults": true
+  },
+  "chrome": {
+    "useSystem": true
+  },
+  "debug": false
+}

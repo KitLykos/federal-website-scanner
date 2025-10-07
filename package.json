@@ -1,0 +1,48 @@
+{
+  "name": "federal-website-scanner",
+  "version": "1.0.0",
+  "description": "Automated accessibility and performance scanning for federal government websites using dual-scanner architecture",
+  "main": "index.js",
+  "scripts": {
+    "validate": "node validate_urls.js",
+    "generate-jobs": "node dynamic_job_gen.js",
+    "scan-unlighthouse": "node unlighthouse-scandata-upload.js",
+    "scan-oobee": "node oobee-scanner.js",
+    "test": "node test-*.js",
+    "config": "node config.js --show"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/federal-website-scanner.git"
+  },
+  "keywords": [
+    "accessibility",
+    "government",
+    "federal",
+    "scanning",
+    "lighthouse",
+    "oobee",
+    "compliance",
+    "automation",
+    "section-508",
+    "wcag"
+  ],
+  "author": "Federal Website Scanner Contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@unlighthouse/cli": "latest",
+    "axios": "latest",
+    "csv": "latest",
+    "googleapis": "latest",
+    "js-yaml": "^4.1.0",
+    "json2csv": "latest",
+    "node-jq": "latest",
+    "xml2js": "latest"
+  },
+  "devDependencies": {
+    "@govtechsg/oobee": "^0.10.68"
+  }
+}

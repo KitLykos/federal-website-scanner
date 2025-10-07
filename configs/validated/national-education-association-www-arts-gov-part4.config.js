@@ -1,0 +1,110 @@
+module.exports = {
+  "site": "https://www.arts.gov",
+  "urls": [
+    "/impact/literary-arts",
+    "/news/events",
+    "/stories/blog/2016/edgar-allan-poe-biography-quotes",
+    "/about/civil-rights-office/applicants-recipients-of-federal-financial-assistance/assurance-of-compliance",
+    "/grants/grants-for-arts-projects/contacts",
+    "/initiative/arts-education-partnership",
+    "/honors",
+    "/initiatives/nea-big-read/adventures-tom-sawyer",
+    "/ArtsHereGrantAnnouncementSept2024",
+    "/stories/blog/2020/seven-poems-indigenous-writers",
+    "/honors/heritage/domingo-mingo-saldivar",
+    "/news/press-releases/2024/national-endowment-arts-announces-more-32-million-arts-funding-organizations-nationwide",
+    "/stories/blog/2025/vacation-poems",
+    "/about/inspector-general",
+    "/stories/blog",
+    "/stories/blog/2020/art-talk-jason-reynolds",
+    "/stories/blog/2014/importance-taking-children-museums",
+    "/initiatives/nea-big-read/archive",
+    "/initiatives/international",
+    "/honors/heritage/tom-davenport",
+    "/honors/jazz/john-birks-dizzy-gillespie",
+    "/honors/heritage/michael-flatley",
+    "/initiatives/nea-big-read/sitting-pretty-view-my-ordinary-resilient-disabled-body",
+    "/stories/magazine/2011/4/what-innovation/julie-taymor",
+    "/stories/podcast/dr-nina-kraus",
+    "/honors/medals/leonardo-flaco-jimenez",
+    "/honors/heritage/shirley-caesar",
+    "/initiatives/blue-star-museums/toolkit-museums",
+    "/impact/research/arts-data-profile-series",
+    "/impact/research/arts-and-cultural-production-satellite-account",
+    "/impact/literary-arts/creative-writing-fellows/adam-johnson",
+    "/stories/podcast/marjan-kamali",
+    "/impact/research/arts-data-profile-series/38",
+    "/stories/blog/2019/10-things-you-didnt-know-about-george-m-cohan",
+    "/about/appropriations-history",
+    "/initiatives/micd",
+    "/news/press-releases/2024/national-endowment-arts-fy-2026-grant-opportunities-now-available",
+    "/news/press-releases/2023/new-data-reveal-how-adults-participated-arts-during-covid-19",
+    "/about/what-is-the-nea/mary-anne-carter-2019-21",
+    "/about/civil-rights-office/applicants-for-employment-and-employees/no-fear-act",
+    "/honors/jazz/sarah-vaughan",
+    "/grants/manage-your-award/some-of-your-responsibilities-as-a-federal-award-recipient",
+    "/about/national-endowment-arts-warns-public-about-grant-scam",
+    "/impact/disaster-readiness-recovery-for-the-arts-and-culture-sector",
+    "/impact/historically-black-colleges-and-universities"
+  ],
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--headless=new"
+    ],
+    "concurrency": 1
+  },
+  "puppeteerPageUserAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "userAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "disableThrottling": true,
+  "disableDeviceEmulation": true,
+  "lighthouseOptions": {
+    "disableStorageReset": true,
+    "disableLantern": true,
+    "throttlingMethod": "provided",
+    "onlyCategories": [
+      "accessibility",
+      "seo",
+      "best-practices"
+    ]
+  },
+  "scanner": {
+    "sitemap": "https://www.arts.gov/sitemap.xml",
+    "crawler": false,
+    "robotsTxt": false,
+    "maxRoutes": 100,
+    "throttle": false,
+    "skipJavascript": true,
+    "samples": 1,
+    "pageTimeout": 90000,
+    "device": "desktop",
+    "exclude": [
+      "/*.pdf",
+      "/*.asp",
+      "/*.aspx",
+      "/sample-pfs-searches",
+      "/security-guidelines-office-location",
+      "/status-indicators",
+      "/blog",
+      "/my-health/*",
+      "/my-va/*",
+      "/auth/*",
+      "/profile/*",
+      "/logout",
+      "**/callback*",
+      "**/login*",
+      "**/signin*"
+    ]
+  },
+  "ci": {
+    "skipMissing": true,
+    "skipRoutesWithoutResults": true
+  },
+  "chrome": {
+    "useSystem": true
+  },
+  "debug": false
+}

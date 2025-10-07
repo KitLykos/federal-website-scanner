@@ -1,0 +1,71 @@
+module.exports = {
+  "site": "https://peacecorps.gov",
+  "urls": [
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/health-education-volunteer-9550br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/high-school-english-teacher-9510br/",
+    "/faqs/finance/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-education-volunteer-9548br/",
+    "/connect/blog/how-much-are-peace-corps-volunteers-paid/",
+    "/albania-and-montenegro/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/youth-development-specialist-9658br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/virtual-service-pilot/co-facilitate-english-club-for-ukrainian-youth-9562br/",
+    "/guyana/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/sustainable-agriculture-extension-promoter-9514br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/community-economic-development-facilitator-9546br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/literacy-promoter-9530br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/science-and-environment-educators-9531br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/business-development-specialist-9578br/",
+    "/morocco/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/middle-school-english-teacher-9513br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/assistant-research-officer-9649br/",
+    "/mongolia/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-education-co-teacher-9521br/",
+    "/kenya/about/contracts/",
+    "/kyrgyz-republic/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/health-extension-volunteer-9533br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-education-teaching-9496br/",
+    "/kenya/",
+    "/ways-to-serve/benefits-and-training/pre-service/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/secondary-education-stem-teacher-9605br/",
+    "/peru/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/youth-development-facilitator-9586br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/monitoring-evaluation-and-reporting-specialist-9584br/",
+    "/faqs/older-applicants/",
+    "/connect/email/",
+    "/ways-to-serve/benefits-and-training/during-service/student-loan-information/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-education-teacher-and-trainer-9544br/",
+    "/connect/register-your-interest-in-becoming-a-flagbearer-at-the-2025-parade-of-nations/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/ridge-to-reef-resilience-promoter-9684br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/community-health-specialist-9537br/",
+    "/palau/",
+    "/el-salvador/about/contracts/",
+    "/donate/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/field-research-specialist-9557br/",
+    "/paraguay/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/risk-management-support-specialist-9657br/",
+    "/benin/",
+    "/how-to-apply/preparing-to-serve/preparing-to-depart/passport-and-visa-instructions/",
+    "/madagascar/",
+    "/educators-and-students/educators/resources/making-natural-pest-controls/",
+    "/liberia/",
+    "/botswana/",
+    "/how-to-apply/application-and-invitation/",
+    "/about-the-agency/media-center/"
+  ],
+  "scanner": {
+    "crawler": false,
+    "sitemap": false,
+    "robotsTxt": false
+  },
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--headless=new"
+    ],
+    "defaultViewport": {
+      "width": 1366,
+      "height": 768
+    }
+  }
+}

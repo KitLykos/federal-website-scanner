@@ -1,0 +1,112 @@
+module.exports = {
+  "site": "https://www.usap.gov",
+  "urls": [
+    "/externalsite.cfm",
+    "/jobsandopportunities/",
+    "/videoclipsandmaps/mcmwebcam.cfm",
+    "/sciencesupport/scienceplanningsummaries/2024_2025/results.cfm",
+    "/news/",
+    "/",
+    "/videoclipsandmaps/spwebcam.cfm",
+    "/search/",
+    "/videoclipsandmaps/palwebcam.cfm",
+    "/proposalinformation/",
+    "/technology/1935/",
+    "/vesselscienceandoperations/",
+    "/sciencesupport/2179/",
+    "/technology/1033/",
+    "/sciencesupport/polarice/",
+    "/aboutusapparticipants/",
+    "/calendarsandschedules/",
+    "/theantarctictreaty/",
+    "/travelanddeployment/541/",
+    "/travelanddeployment/1860/",
+    "/travelanddeployment/510/",
+    "/492/",
+    "/vesselscienceandoperations/20/",
+    "/travelanddeployment/1034/",
+    "/vesselscienceandoperations/17/",
+    "/technology/4750/",
+    "/travelanddeployment/517/",
+    "/vesselscienceandoperations/1561/",
+    "/travelanddeployment/540/",
+    "/environmental/1859/",
+    "/technology/1563/",
+    "/vesselscienceandoperations/309/",
+    "/vesselscienceandoperations/2685/",
+    "/technology/518/",
+    "/travelanddeployment/4727/",
+    "/logistics/530/",
+    "/vesselscienceandoperations/872/",
+    "/vesselscienceandoperations/19/",
+    "/vesselscienceandoperations/16/",
+    "/sciencesupport/4134/",
+    "/sciencesupport/4133/",
+    "/technology/1974/",
+    "/sciencesupport/103/",
+    "/environmental/1858/",
+    "/1814/",
+    "/onlinelearningcenter/1529/",
+    "/494/"
+  ],
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--headless=new"
+    ],
+    "concurrency": 1
+  },
+  "puppeteerPageUserAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "userAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "disableThrottling": true,
+  "disableDeviceEmulation": true,
+  "lighthouseOptions": {
+    "disableStorageReset": true,
+    "disableLantern": true,
+    "throttlingMethod": "provided",
+    "onlyCategories": [
+      "accessibility",
+      "seo",
+      "best-practices"
+    ]
+  },
+  "scanner": {
+    "sitemap": "https://www.usap.gov/sitemap.xml",
+    "crawler": false,
+    "robotsTxt": false,
+    "maxRoutes": 100,
+    "throttle": false,
+    "skipJavascript": true,
+    "samples": 1,
+    "pageTimeout": 90000,
+    "device": "desktop",
+    "exclude": [
+      "/*.pdf",
+      "/*.asp",
+      "/*.aspx",
+      "/sample-pfs-searches",
+      "/security-guidelines-office-location",
+      "/status-indicators",
+      "/blog",
+      "/my-health/*",
+      "/my-va/*",
+      "/auth/*",
+      "/profile/*",
+      "/logout",
+      "**/callback*",
+      "**/login*",
+      "**/signin*"
+    ]
+  },
+  "ci": {
+    "skipMissing": true,
+    "skipRoutesWithoutResults": true
+  },
+  "chrome": {
+    "useSystem": true
+  },
+  "debug": false
+}

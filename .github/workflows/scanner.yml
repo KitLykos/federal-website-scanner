@@ -1,0 +1,164 @@
+name: Federal Website Scanner
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      agency_filter:
+        description: 'Agency to scan (leave empty for all)'
+        required: false
+        type: string
+      max_urls:
+        description: 'Maximum URLs per domain'
+        required: false
+        default: '100'
+        type: string
+
+env:
+  # Scanner configuration
+  SCANNER_NAME: "FederalWebsiteScanner"
+  SCANNER_EMAIL: "scanner@example.com"
+  SCANNER_WEBSITE: "https://github.com/${{ github.repository }}"
+  
+  # Default scanning limits
+  MAX_URLS_TOTAL: ${{ github.event.inputs.max_urls || '800' }}
+  MAX_URLS_PER_DOMAIN: 100
+  CHUNK_SIZE: 50
+  PAGE_TIMEOUT_MS: 180000
+
+jobs:
+  # Stage 1: Validate URLs and generate job configurations
+  validate-and-generate:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.generate-matrix.outputs.matrix }}
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Validate URLs
+        run: |
+          echo "🔍 Validating federal website URLs..."
+          node validate_urls.js
+          
+      - name: Generate scan jobs
+        id: generate-matrix
+        env:
+          AGENCY_NAME: ${{ github.event.inputs.agency_filter }}
+        run: |
+          echo "⚙️ Generating scan job matrix..."
+          node dynamic_job_gen.js
+          
+          # Convert YAML to JSON for GitHub Actions matrix
+          if [ -f "output/generated-jobs/generated.yml" ]; then
+            node -e "
+              const yaml = require('js-yaml');
+              const fs = require('fs');
+              const content = fs.readFileSync('output/generated-jobs/generated.yml', 'utf8');
+              const data = yaml.load(content);
+              const jobs = Object.entries(data).map(([name, config]) => ({
+                name: name,
+                scanType: config.scanType || 'unlighthouse',
+                agency: config.agency || 'unknown',
+                domain: config.domain || 'unknown',
+                configFile: config.configFile || ''
+              }));
+              console.log('matrix=' + JSON.stringify({include: jobs}));
+            " >> $GITHUB_OUTPUT
+          else
+            echo "matrix={\"include\":[]}" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Upload job configurations
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-configs
+          path: |
+            configs/validated/
+            output/generated-jobs/
+            output/validated-urls.json
+          retention-days: 30
+
+  # Stage 2: Execute scans in parallel
+  scan-websites:
+    needs: validate-and-generate
+    if: ${{ fromJson(needs.validate-and-generate.outputs.matrix).include[0] }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix: ${{ fromJson(needs.validate-and-generate.outputs.matrix) }}
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Download scan configurations
+        uses: actions/download-artifact@v4
+        with:
+          name: scan-configs
+          
+      - name: Setup Chrome for Lighthouse
+        if: matrix.scanType == 'unlighthouse'
+        uses: browser-actions/setup-chrome@v1
+        
+      - name: Run Unlighthouse scan
+        if: matrix.scanType == 'unlighthouse'
+        env:
+          SITE_FILE: ${{ matrix.configFile }}
+          USER_AGENT: ${{ env.SCANNER_NAME }}/1.0 (+${{ env.SCANNER_WEBSITE }})
+        run: |
+          echo "🚀 Running Unlighthouse scan for ${{ matrix.agency }} - ${{ matrix.domain }}"
+          
+          if [ -f "${{ matrix.configFile }}" ]; then
+            npx unlighthouse-ci --config-file "${{ matrix.configFile }}" \
+              --reporter csv \
+              --output-dir ".unlighthouse-${{ matrix.name }}"
+          else
+            echo "❌ Config file not found: ${{ matrix.configFile }}"
+            exit 1
+          fi
+          
+      - name: Run OOBEE accessibility scan  
+        if: matrix.scanType == 'oobee'
+        env:
+          SCANNER_EMAIL: ${{ env.SCANNER_EMAIL }}
+          SCAN_TYPE: "oobee"
+        run: |
+          echo "♿ Running OOBEE accessibility scan for ${{ matrix.agency }} - ${{ matrix.domain }}"
+          
+          # Run OOBEE scanner (currently in simulation mode)
+          node oobee-scanner.js "${{ matrix.configFile }}"
+          
+      - name: Upload scan artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scan-results-${{ matrix.name }}
+          path: |
+            .unlighthouse-*/
+            oobee-results.json
+            *.log
+            scan-*.csv
+          retention-days: 30

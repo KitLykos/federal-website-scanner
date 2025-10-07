@@ -1,0 +1,113 @@
+module.exports = {
+  "site": "https://www.nwtrb.gov",
+  "urls": [
+    "/meetings/past-meetings/winter-board-meeting---february-9-10-2005",
+    "/our-work/reports/a-report-to-the-u.s.-congress-and-the-secretary-of-energy-board-activities-january-2008---december-2012",
+    "/our-work/correspondence/board-letter-to-dr.-b.-john-garrick-from-mr.-robert-loux",
+    "/our-work/correspondence/board-letter-to-mr.-david-huizenga",
+    "/our-work/correspondence/board-letter-to-mr.-david-huizenga---may-28-2013",
+    "/our-work/press-releases/christopher-burk-named-director-of-external-affairs-at-the-u.s.-nuclear-waste-technical-review-board-(january-11-2024)",
+    "/meetings/past-meetings/winter-2008-board-meeting---january-16-2008",
+    "/our-work/correspondence/board-letter-to-mr.-william-white---january-10-2020",
+    "/meetings/past-meetings/fall-2004-board-meeting---september-20-2004",
+    "/meetings/past-meetings/fall-board-meeting---september-27-2006",
+    "/meetings/past-meetings/fall-2008-board-meeting---september-24-2008",
+    "/home/2025/07/25/press-release---summer-2025-board-meeting---august-29--2025",
+    "/our-work/reports/2",
+    "/meetings/past-meetings/winter-board-meeting---february-1-2006",
+    "/our-work/correspondence/letter-from-robert-loux",
+    "/our-work/correspondence/board-comments-on-the-final-report-of-the-blue-ribbon-commission-on-america's-nuclear-future",
+    "/our-work/correspondence/board-letter-to-mr.-james-owendoff-and-mr.-edward-mcginnis",
+    "/Sitefinity/Login?ReturnUrl=https%3a%2f%2fwww.nwtrb.gov%2four-work%2fcorrespondence%2faction%2fpreview",
+    "/meetings/upcoming-public-meetings/designing-a-process-for-selecting-a-site-for-a-deep-mined-geologic-repository-for-high-level-radioactive-waste-and-spent-nuclear-fuel-an-overview-and-summary-(2015)",
+    "/our-work/reports/letter-report-to-the-u.s.-congress-and-the-secretary-of-energy-(2002)",
+    "/our-work/correspondence/doe-letter-to-the-board",
+    "/Sitefinity/Login?ReturnUrl=https%3a%2f%2fwww.nwtrb.gov%2fnwtrb-foia-pa%2faction%2fpreview",
+    "/meetings/past-meetings/5",
+    "/meetings/past-meetings/spring-2004-board-meeting---may-18-19-2004",
+    "/meetings/past-meetings/spring-board-meeting---may-9-2006",
+    "/meetings/past-meetings/winter-1995-board-meeting---january-10-11-1995",
+    "/home/2025/08/07/board-letter-to-roger-jarrell---august-7--2025",
+    "/our-work/correspondence/board-letter-to-the-honorable-jennifer-granholm---april-8-2011",
+    "/our-work/correspondence/board-letter-to-acting-assistant-secretary-john-kotek---august-31-2015",
+    "/our-work/correspondence/board-letter-to-acting-assistant-secretary-john-kotek",
+    "/our-work/correspondence/december-7-2016-letter-to-mr.-john-kotek-expressing-thanks-for-the-participation-of-doe-personnel-in-fact-finding-meetings-held-to-clarify-information-from-the-board's-february-17-2016-meetings-on-high-burnup-snf",
+    "/our-work/correspondence/board-letter-to-mark-whitney",
+    "/our-work/correspondence/board-letter-to-director-edward-sproat",
+    "/meetings/upcoming-public-meetings/board-letter-to-dr.-kathryn-huff---august-12-2021",
+    "/our-work/correspondence/board-letter-to-dr.-kathryn-huff",
+    "/our-work/correspondence/december-8-2016-letter-from-the-board-to-dr.-monica-regalbuto-and-mr.-john-kotek-following-the-board's-august-24-2016-meeting-on-integration-of-doe-activities-related-to-transporting-and-disposing-of-snf-and-hlw",
+    "/our-work/correspondence/letter-to-dr.-peter-lyons",
+    "/our-work/correspondence/board-letter-to-dr.-wiliam-boyle-and-mr.-kenneth-picha",
+    "/our-work/correspondence/board-letter-to-edward-sproat---april-19-2007",
+    "/our-work/correspondence/board-letter-to-edward-sproat---december-14-2006",
+    "/our-work/correspondence/board-letter-to-edward-sproat---january-12-2007",
+    "/our-work/correspondence/august-2017-letter-from-the-board-to-mr.-edward-mcginnis",
+    "/our-work/correspondence/board-letter-to-mr.-edward-mcginnis-(november-27-2018)",
+    "/our-work/correspondence/board-letter-to-mr.-edward-mcginnis",
+    "/our-work/correspondence/board-letter-to-ms.-ann-white-and-mr.-edward-mcginnis",
+    "/our-work/correspondence/board-letter-to-paul-golan---june-14-2006",
+    "/our-work/correspondence/board-letter-to-secretary-bodman---february-13-2007",
+    "/our-work/correspondence/board-letter-to-the-honorable-ines-triay"
+  ],
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--headless=new"
+    ],
+    "concurrency": 1
+  },
+  "puppeteerPageUserAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "userAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "disableThrottling": true,
+  "disableDeviceEmulation": true,
+  "lighthouseOptions": {
+    "disableStorageReset": true,
+    "disableLantern": true,
+    "throttlingMethod": "provided",
+    "onlyCategories": [
+      "accessibility",
+      "seo",
+      "best-practices"
+    ]
+  },
+  "scanner": {
+    "sitemap": "https://www.nwtrb.gov/sitemap.xml",
+    "crawler": false,
+    "robotsTxt": false,
+    "maxRoutes": 100,
+    "throttle": false,
+    "skipJavascript": true,
+    "samples": 1,
+    "pageTimeout": 90000,
+    "device": "desktop",
+    "exclude": [
+      "/*.pdf",
+      "/*.asp",
+      "/*.aspx",
+      "/sample-pfs-searches",
+      "/security-guidelines-office-location",
+      "/status-indicators",
+      "/blog",
+      "/my-health/*",
+      "/my-va/*",
+      "/auth/*",
+      "/profile/*",
+      "/logout",
+      "**/callback*",
+      "**/login*",
+      "**/signin*"
+    ]
+  },
+  "ci": {
+    "skipMissing": true,
+    "skipRoutesWithoutResults": true
+  },
+  "chrome": {
+    "useSystem": true
+  },
+  "debug": false
+}

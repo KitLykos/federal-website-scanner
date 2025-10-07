@@ -1,0 +1,112 @@
+module.exports = {
+  "site": "https://www.usps.com",
+  "urls": [
+    "/root/global/server_responses/error_404.htm",
+    "/root/global/server_responses/error_404.htm",
+    "/manage/informed-delivery.htm",
+    "/",
+    "/root/global/server_responses/error_404.htm",
+    "/root/global/server_responses/anyapp_outage_apology.htm",
+    "/search/results.htm",
+    "/help/contact-us.htm",
+    "/ship/ground-advantage.htm",
+    "/business/priority-mail-next-day.htm",
+    "/help/missing-mail.htm",
+    "/manage/po-boxes.htm",
+    "/international/passports.htm",
+    "/manage/forward.htm",
+    "/root/global/server_responses/anyapp_outage_apology.htm",
+    "/root/global/server_responses/anyapp_outage_apology.htm",
+    "/help/claims.htm",
+    "/ship/",
+    "/manage/hold-mail.htm",
+    "/manage/",
+    "/ship/priority-mail.htm",
+    "/business/prices.htm",
+    "/root/global/server_responses/anyapp_outage_apology.htm",
+    "/root/global/server_responses/anyapp_outage_apology.htm",
+    "/ship/online-shipping.htm",
+    "/ship/mail-shipping-services.htm",
+    "/root/global/server_responses/anyapp_outage_apology.htm",
+    "/root/global/server_responses/anyapp_outage_apology.htm",
+    "/help/refunds.htm",
+    "/ship/packages.htm",
+    "/international/customs-forms.htm",
+    "/root/global/server_responses/anyapp_outage_apology.htm",
+    "/ship/first-class-mail.htm",
+    "/root/global/server_responses/error_404.htm",
+    "/text-tracking/welcome.htm",
+    "/ship/priority-mail-express.htm",
+    "/manage/package-intercept.htm",
+    "/ship/letters.htm",
+    "/business/label-broker.htm",
+    "/business/every-door-direct-mail.htm",
+    "/ship/welcome.htm",
+    "/international/mail-shipping-services.htm",
+    "/root/global/server_responses/error_404.htm",
+    "/root/global/server_responses/error_404.htm",
+    "/shop/money-orders.htm",
+    "/service-standards/",
+    "/international/"
+  ],
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--headless=new"
+    ],
+    "concurrency": 1
+  },
+  "puppeteerPageUserAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "userAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "disableThrottling": true,
+  "disableDeviceEmulation": true,
+  "lighthouseOptions": {
+    "disableStorageReset": true,
+    "disableLantern": true,
+    "throttlingMethod": "provided",
+    "onlyCategories": [
+      "accessibility",
+      "seo",
+      "best-practices"
+    ]
+  },
+  "scanner": {
+    "sitemap": "https://www.usps.com/sitemap.xml",
+    "crawler": false,
+    "robotsTxt": false,
+    "maxRoutes": 100,
+    "throttle": false,
+    "skipJavascript": true,
+    "samples": 1,
+    "pageTimeout": 90000,
+    "device": "desktop",
+    "exclude": [
+      "/*.pdf",
+      "/*.asp",
+      "/*.aspx",
+      "/sample-pfs-searches",
+      "/security-guidelines-office-location",
+      "/status-indicators",
+      "/blog",
+      "/my-health/*",
+      "/my-va/*",
+      "/auth/*",
+      "/profile/*",
+      "/logout",
+      "**/callback*",
+      "**/login*",
+      "**/signin*"
+    ]
+  },
+  "ci": {
+    "skipMissing": true,
+    "skipRoutesWithoutResults": true
+  },
+  "chrome": {
+    "useSystem": true
+  },
+  "debug": false
+}

@@ -1,0 +1,71 @@
+module.exports = {
+  "site": "https://peacecorps.gov",
+  "urls": [
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/youth-and-sports-development-facilitator-9543br/",
+    "/colombia/",
+    "/eastern-caribbean/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/urban-youth-development-volunteer-9520br/",
+    "/ukraine/",
+    "/moldova/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/health-educator-9509br/",
+    "/what-we-do/where-we-serve/pacific-islands/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/community-economic-development-promoter-9501br/",
+    "/what-we-do/where-we-serve/north-america/",
+    "/what-we-do/where-we-serve/south-america/",
+    "/faqs/",
+    "/ways-to-serve/our-work-sectors/community-economic-development/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/sustainable-agricultural-systems-promoter-9507br/",
+    "/ways-to-serve/our-work-sectors/youth-in-development/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/health-and-well-being-promoter-9526br/",
+    "/about-the-agency/media-center/news/pause-of-cohort-to-tanzania/",
+    "/nepal/",
+    "/ways-to-serve/benefits-and-training/during-service/",
+    "/ways-to-serve/benefits-and-training/after-service/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-language-co-teacher-and-youth-educator-9458br/",
+    "/faqs/applying/",
+    "/about-the-agency/contact-us/",
+    "/donate/checkout/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/youth-and-families-development-promoter-9525br/",
+    "/georgia/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/hivaids-care-and-treatment-facilitator-9580br/",
+    "/ecuador/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/community-health-facilitator-9504br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/agriculture-outreach-volunteer-9538br/",
+    "/philippines/",
+    "/returned-volunteers/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/youth-leadership-development-facilitator-9516br/",
+    "/jamaica/",
+    "/fiji/",
+    "/ways-to-serve/our-work-sectors/agriculture/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/community-health-outreach-volunteer-9539br/",
+    "/ways-to-serve/service-assignments/",
+    "/about-the-agency/leadership/",
+    "/cameroon/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/community-development-facilitator-9549br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-education-teacher-9540br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-education-teaching-9518br/",
+    "/what-we-do/life-in-the-peace-corps/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/environmental-datagis-specialist-9623br/",
+    "/about-the-agency/agency-jobs/salary-and-benefits/",
+    "/thailand/",
+    "/vanuatu/",
+    "/how-to-apply/application-and-invitation/in-progress-applicants/",
+    "/mexico/"
+  ],
+  "scanner": {
+    "crawler": false,
+    "sitemap": false,
+    "robotsTxt": false
+  },
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--headless=new"
+    ],
+    "defaultViewport": {
+      "width": 1366,
+      "height": 768
+    }
+  }
+}

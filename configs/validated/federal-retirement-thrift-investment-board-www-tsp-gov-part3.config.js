@@ -1,0 +1,112 @@
+module.exports = {
+  "site": "https://www.tsp.gov",
+  "urls": [
+    "/bulletins/24-4/",
+    "/in-service-withdrawal-basics/alternatives-to-withdrawals/",
+    "/privacy-policy/",
+    "/planning-for-life-events/marriage-and-spouses-rights/",
+    "/making-contributions/contribution-refunds/",
+    "/funds-lifecycle/l-2075/",
+    "/for-beneficiaries/determining-beneficiaries/",
+    "/news-and-resources/plan-news/",
+    "/plan_news/2025-07-02-second-quarter-participant-statements-available-online-by-the-end-of-july/",
+    "/funds-lifecycle/funds-retired/",
+    "/funds-lifecycle/l-2055/",
+    "/changes-in-your-career/leaving-uniformed-services/",
+    "/funds-lifecycle/l-2060/",
+    "/funds-lifecycle/l-2065/",
+    "/mobile/withdrawals-in-retirement/",
+    "/funds-lifecycle/l-2045/",
+    "/agency-service-reps/",
+    "/bulletins/14-4/",
+    "/for-beneficiaries/being-a-beneficiary-participant/",
+    "/changes-in-your-career/entering-non-pay-status/",
+    "/agency-service-reps/bulletins/",
+    "/agency-service-reps/historical-information/",
+    "/planning-for-life-events/power-of-attorney/",
+    "/forms/index.html",
+    "/bulletins/23-2/",
+    "/changes-in-your-career/returning-to-the-federal-government/",
+    "/plan_news/2025-06-30-changes-to-two-lifecycle-funds/",
+    "/bulletins/24-2/",
+    "/mobile/tsp-basics/expenses-and-fees/",
+    "/plan-news/2023-07-25-manage-installment-payments-in-my-account/",
+    "/privacy-policy/ava-privacy-act-statement/",
+    "/mobile/making-contributions/",
+    "/plan-news/2020-10-06-login-changing/",
+    "/accessibility/",
+    "/privacy/",
+    "/mobile/in-service-withdrawal-basics/in-service-withdrawal-types-and-terms/",
+    "/agency-service-reps/announcements/",
+    "/bulletins/19-9/",
+    "/bulletins/15-4/",
+    "/bulletins/14-u-3/",
+    "/bulletins/19-6/",
+    "/funds-lifecycle/l-2070/",
+    "/fund-performance/share-price-history/",
+    "/bulletins/23-5/",
+    "/for-beneficiary-participants/",
+    "/plan-news.xml",
+    "/about/"
+  ],
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--headless=new"
+    ],
+    "concurrency": 1
+  },
+  "puppeteerPageUserAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "userAgent": "Mozilla/5.0 (compatible; FederalWebsiteScanner/1.0; +https://github.com/your-org/federal-website-scanner)",
+  "disableThrottling": true,
+  "disableDeviceEmulation": true,
+  "lighthouseOptions": {
+    "disableStorageReset": true,
+    "disableLantern": true,
+    "throttlingMethod": "provided",
+    "onlyCategories": [
+      "accessibility",
+      "seo",
+      "best-practices"
+    ]
+  },
+  "scanner": {
+    "sitemap": "https://www.tsp.gov/sitemap.xml",
+    "crawler": false,
+    "robotsTxt": false,
+    "maxRoutes": 100,
+    "throttle": false,
+    "skipJavascript": true,
+    "samples": 1,
+    "pageTimeout": 90000,
+    "device": "desktop",
+    "exclude": [
+      "/*.pdf",
+      "/*.asp",
+      "/*.aspx",
+      "/sample-pfs-searches",
+      "/security-guidelines-office-location",
+      "/status-indicators",
+      "/blog",
+      "/my-health/*",
+      "/my-va/*",
+      "/auth/*",
+      "/profile/*",
+      "/logout",
+      "**/callback*",
+      "**/login*",
+      "**/signin*"
+    ]
+  },
+  "ci": {
+    "skipMissing": true,
+    "skipRoutesWithoutResults": true
+  },
+  "chrome": {
+    "useSystem": true
+  },
+  "debug": false
+}

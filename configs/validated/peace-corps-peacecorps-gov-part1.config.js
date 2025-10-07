@@ -1,0 +1,71 @@
+module.exports = {
+  "site": "https://peacecorps.gov",
+  "urls": [
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/",
+    "/",
+    "/about-the-agency/policies-and-publications/reports-and-documents/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-response/",
+    "/what-we-do/where-we-serve/",
+    "/connect/events/",
+    "/educators-and-students/university-programs/coverdell-fellows/partner-schools/",
+    "/ways-to-serve/service-assignments/browse-opportunities/virtual-service-pilot/",
+    "/connect/recruiter/",
+    "/how-to-apply/preparing-to-apply/eligibility-and-core-expectations/",
+    "/returned-volunteers/careers-and-further-education/career-link/",
+    "/how-to-apply/preparing-to-apply/",
+    "/ways-to-serve/serve-with-us/find-the-right-fit/",
+    "/what-we-do/life-in-the-peace-corps/volunteer-profiles/",
+    "/ways-to-serve/serve-with-us/peace-corps-volunteer/",
+    "/ways-to-serve/benefits-and-training/",
+    "/ways-to-serve/service-assignments/serve-where-needed-most/",
+    "/ways-to-serve/serve-with-us/peace-corps-response/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-education-teaching-9641br/",
+    "/how-to-apply/preparing-to-apply/before-you-apply-checklist/",
+    "/how-to-apply/preparing-to-apply/application-process/",
+    "/donate/projects/",
+    "/ways-to-serve/service-assignments/added-benefit-assignments/",
+    "/educators-and-students/university-programs/coverdell-fellows/",
+    "/ways-to-serve/our-work-sectors/health/",
+    "/about-the-agency/media-center/news/",
+    "/ways-to-serve/our-work-sectors/education/",
+    "/what-we-do/our-mission/",
+    "/connect/recruiter/confirm/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/english-educationcommunity-development-9455br/",
+    "/how-to-apply/application-and-invitation/medical-clearance/",
+    "/ways-to-serve/serve-with-us/virtual-service-pilot/",
+    "/ways-to-serve/serve-with-us/",
+    "/what-we-do/where-we-serve/africa/",
+    "/about-the-agency/media-center/news/peace-corps-shuffles-senior-leadership-team/",
+    "/about-the-agency/agency-jobs/",
+    "/connect/blog/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/organizational-and-community-development-facilitator-9457br/",
+    "/costa-rica/",
+    "/educators-and-students/educators/resources/blind-men-and-elephant/story-blind-men-and-elephant/",
+    "/what-we-do/where-we-serve/europe/",
+    "/ways-to-serve/our-work-sectors/environment/",
+    "/what-we-do/where-we-serve/asia/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/health-extension-volunteer-9519br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/youth-health-promoter-9503br/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/environmental-education-volunteer-9497br/",
+    "/ways-to-serve/our-work-sectors/",
+    "/belize/",
+    "/ways-to-serve/service-assignments/browse-opportunities/peace-corps-volunteer/primary-education-teacher-trainer-9524br/",
+    "/about-the-agency/"
+  ],
+  "scanner": {
+    "crawler": false,
+    "sitemap": false,
+    "robotsTxt": false
+  },
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--headless=new"
+    ],
+    "defaultViewport": {
+      "width": 1366,
+      "height": 768
+    }
+  }
+}

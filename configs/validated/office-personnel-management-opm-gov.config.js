@@ -1,0 +1,61 @@
+module.exports = {
+  "site": "https://opm.gov",
+  "urls": [
+    "/policy-data-oversight/pay-leave/salaries-wages/2025/general-schedule/",
+    "/",
+    "/policy-data-oversight/pay-leave/federal-holidays/",
+    "/policy-data-oversight/pay-leave/salaries-wages/",
+    "/retirement-center/",
+    "/retirement-center/calculators/fegli-calculator/fegli-iframe/",
+    "/policy-data-oversight/latest-memos/",
+    "/policy-data-oversight/workforce-restructuring/reductions-in-force-rif/",
+    "/policy-data-oversight/data-analysis-documentation/personnel-documentation/",
+    "/policy-data-oversight/pay-leave/salaries-wages/2025/law-enforcement-officer/",
+    "/retirement-center/fers-information/",
+    "/policy-data-oversight/pay-leave/salaries-wages/2024/general-schedule",
+    "/healthcare-insurance/healthcare/plan-information/compare-plans/fehb/plans",
+    "/healthcare-insurance/",
+    "/healthcare-insurance/healthcare/plan-information/compare-plans/",
+    "/policy-data-oversight/pay-leave/pay-systems/general-schedule/",
+    "/policy-data-oversight/classification-qualifications/general-schedule-qualification-standards/",
+    "/retirement-center/fers-information/computation/",
+    "/retirement-center/fers-information/types-of-retirement/",
+    "/healthcare-insurance/healthcare/",
+    "/policy-data-oversight/snow-dismissal-procedures/current-status/",
+    "/support/retirement/contact/",
+    "/retirement-center/fers-information/eligibility/",
+    "/policy-data-oversight/classification-qualifications/classifying-general-schedule-positions/",
+    "/retirement-center/my-annuity-and-benefits/",
+    "/healthcare-insurance/healthcare/plan-information/compare-plans/fehb/plandetails",
+    "/retirement-center/calculators/fegli-calculator/",
+    "/healthcare-insurance/life-insurance/",
+    "/about-us/",
+    "/policy-data-oversight/",
+    "/retirement-center/calculators/fegli-calculator/employee-summary/",
+    "/retirement-center/quick-guide/",
+    "/policy-data-oversight/pay-leave/",
+    "/policy-data-oversight/pay-leave/pay-systems/federal-wage-system/",
+    "/retirement-center/csrs-information/planning-and-applying/",
+    "/forms/standard-forms/",
+    "/healthcare-insurance/guide-me/federal-employees/",
+    "/policy-data-oversight/pay-leave/salaries-wages/salary-tables/25tables/html/rus.aspx",
+    "/policy-data-oversight/pay-leave/salaries-wages/salary-tables/25tables/html/dcb.aspx",
+    "/retirement-center/calculators/fegli-calculator/check-sheet/",
+    "/healthcare-insurance/pshb/",
+    "/policy-data-oversight/veterans-services/vet-guide-for-hr-professionals/",
+    "/healthcare-insurance/healthcare/plan-information/plans/",
+    "/retirement-center/my-annuity-and-benefits/annuity-payments/",
+    "/support/retirement/"
+  ],
+  "scanner": {
+    "crawler": false,
+    "sitemap": false,
+    "robotsTxt": false
+  },
+  "puppeteerOptions": {
+    "args": [
+      "--no-sandbox",
+      "--disable-dev-shm-usage"
+    ]
+  }
+}
