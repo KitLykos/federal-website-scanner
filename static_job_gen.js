@@ -208,7 +208,7 @@ async function generateStaticPipeline() {
 
     // Create OOBEE matrix job
     allJobs[`${agency.name}_oobee_matrix`] = {
-      extends: '.oobee_matrix_template',
+      extends: '.default_template',
       stage: 'build',
       variables: {
         KUBERNETES_MEMORY_REQUEST: '1.5Gi',
