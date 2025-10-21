@@ -9,11 +9,14 @@ const { createLogger } = require('./logger');
 const log = createLogger('OobeeScanner');
 
 /**
- * Oobee Scanner Integration
+ * Oobee Scanner Integration - SIMULATION MODE ONLY
  * 
- * This script provides a wrapper around Oobee CLI to integrate with our
- * existing site evaluation pipeline. It runs Oobee scans and formats
- * the output for upload to Google Sheets.
+ * ⚠️  WARNING: This script does NOT perform real accessibility scans!
+ * ⚠️  It generates fake/mock accessibility data for testing infrastructure.
+ * ⚠️  The actual OOBEE CLI scanner fails to execute properly.
+ * 
+ * This script provides a wrapper that SHOULD integrate with Oobee CLI,
+ * but currently only simulates results due to OOBEE execution issues.
  */
 
 // Default configuration
@@ -32,9 +35,11 @@ const DEFAULT_CONFIG = {
 /**
  * Run Oobee scan with specified configuration
  * 
- * NOTE: This is currently a proof-of-concept implementation
- * The actual Oobee integration will be completed once we resolve
- * the package build issues or implement portable Oobee.
+ * ⚠️  CRITICAL: This function only generates FAKE accessibility data!
+ * ⚠️  The actual OOBEE scanner CLI does not work - it fails to execute.
+ * ⚠️  All results returned are simulated for infrastructure testing only.
+ * 
+ * TODO: Fix OOBEE CLI execution issues to enable real accessibility scanning.
  */
 async function runOobeeScan(siteUrl, config = {}) {
   const finalConfig = { ...DEFAULT_CONFIG, ...config };

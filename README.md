@@ -6,7 +6,7 @@ An open-source toolkit for automated accessibility and performance scanning of f
 
 This project automates comprehensive evaluation of federal websites through:
 - **Dynamic URL Discovery** - GSA Digital Analytics API integration for real-time website detection
-- **Dual Scanner Architecture** - Unlighthouse (performance) + OOBEE (accessibility compliance)  
+- **Dual Scanner Architecture** - Unlighthouse (performance, ✅ working) + OOBEE (accessibility, ⚠️ simulation mode)  
 - **Automated Job Generation** - Intelligent configuration creation for 500+ government sites
 - **Centralized Reporting** - Google Sheets integration with cross-scanner correlation
 
@@ -14,7 +14,7 @@ This project automates comprehensive evaluation of federal websites through:
 
 ### 🔍 **Dual Scanner Coverage**
 - **Unlighthouse Scanner**: Lighthouse-based accessibility, performance, and SEO auditing
-- **OOBEE Scanner**: Specialized accessibility compliance testing with detailed issue categorization
+- **OOBEE Scanner**: ⚠️ Infrastructure only - generates mock data (scanner execution issues)
 - **Parallel Execution**: Both tools scan the same sites for comprehensive coverage and validation
 
 ### ⚙️ **Intelligent Configuration**
@@ -96,7 +96,7 @@ npm run config
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   URL Discovery │ -> │  Job Generation │ -> │ Parallel Scans  │
-│  (GSA DAP API)  │    │ (Matrix Config) │    │ (UL + OOBEE)    │
+│  (GSA DAP API)  │    │ (Matrix Config) │    │ (UL✅ + OOBEE⚠️) │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
                                                        │
 ┌─────────────────┐    ┌─────────────────┐           ▼
@@ -199,9 +199,9 @@ The project includes GitHub Actions workflows for:
 - **Output**: Lighthouse scores with historical tracking
 - **Best For**: Overall site health and performance optimization
 
-### OOBEE  
-- **Purpose**: Detailed accessibility compliance testing
-- **Output**: Structured issue reports with severity classification
+### OOBEE ⚠️  
+- **Status**: Simulation mode only - generates mock accessibility data
+- **Output**: ⚠️ Fake accessibility findings for infrastructure testing
 - **Best For**: Section 508 compliance and accessibility auditing
 
 ### Dual Scanner Benefits
@@ -306,7 +306,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **GSA Digital Analytics Program** for federal website data
 - **Unlighthouse** for performance and accessibility scanning
-- **OOBEE** for specialized accessibility compliance testing
+- **OOBEE** infrastructure (awaiting functional scanner package)
 - **Federal agencies** for supporting automated accessibility initiatives
 - **Open source community** for contributions and feedback
 
@@ -321,7 +321,7 @@ For questions, issues, or contributions:
 
 ## 🎯 Roadmap
 
-- [ ] **Real-time OOBEE integration** (currently in simulation mode)
+- [ ] **Fix OOBEE scanner execution** (currently generates fake data due to CLI issues)
 - [ ] **Additional scanner integrations** (axe-core, Pa11y)
 - [ ] **Advanced filtering** (by agency type, compliance status)
 - [ ] **API endpoints** for programmatic access

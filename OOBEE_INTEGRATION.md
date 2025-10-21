@@ -2,15 +2,17 @@
 
 This document explains the Oobee accessibility scanner integration with our site evaluation tools.
 
-## Current Status: Simulation Mode ✨
+## Current Status: Simulation Mode Only ⚠️
 
-The integration is currently running in **simulation mode** as a proof-of-concept. This demonstrates:
+**IMPORTANT: This integration is currently running in simulation mode and does NOT perform actual accessibility scans.**
+
+The integration generates **fake accessibility data** to demonstrate the infrastructure. This demonstrates:
 
 - ✅ CI pipeline integration structure
 - ✅ Configuration management
 - ✅ Results processing and artifact handling
 - ✅ Parallel execution alongside Unlighthouse
-- ⏳ Actual Oobee scanner execution (pending package resolution)
+- ❌ **Actual Oobee scanner execution (NOT WORKING - scanner fails to run)**
 
 ## Architecture
 
@@ -57,9 +59,11 @@ The integration is currently running in **simulation mode** as a proof-of-concep
          └─────────────────┘
 ```
 
-## Simulated Results
+## ⚠️ SIMULATED Results Only
 
-The current simulation generates realistic accessibility results:
+**WARNING: These are fake results for testing infrastructure only.**
+
+The current simulation generates mock accessibility results that look realistic but are completely fabricated:
 
 ```json
 {
@@ -81,22 +85,25 @@ The current simulation generates realistic accessibility results:
 }
 ```
 
-## Next Steps
+## Next Steps - REAL WORK NEEDED
 
-### Phase 1: Package Resolution 🔧
-- Resolve Oobee npm package build issues
-- Implement portable Oobee installation
-- Test actual scanner execution
+### ⚠️ CRITICAL: Phase 1 - Make OOBEE Actually Work
+- **Fix OOBEE CLI execution issues** (currently fails silently)
+- Resolve package runtime problems
+- Get actual scanner running instead of simulation
+- **Status: BLOCKED - Scanner does not execute**
 
-### Phase 2: Real Integration 🚀
+### Phase 2: Real Integration (Cannot start until Phase 1 complete)
 - Replace simulation with actual Oobee calls
-- Add PDF scanning capabilities
+- Add PDF scanning capabilities  
 - Implement custom flow support
+- **Status: WAITING on Phase 1**
 
-### Phase 3: Enhanced Features 📊
+### Phase 3: Enhanced Features (Future)
 - Results comparison (Unlighthouse vs Oobee)
 - Unified reporting dashboard
 - Agency-specific configurations
+- **Status: DEPENDS on real scanner working**
 
 ## Testing
 
@@ -128,20 +135,29 @@ The `ci-oobee` job runs automatically in the CI stage and generates:
 - Safe mode: Yes (for government sites)
 - File types: HTML only (PDF support pending)
 
-## Benefits Realized
+## Benefits Realized (Infrastructure Only)
 
-Even in simulation mode, this integration demonstrates:
+⚠️ **Note: These benefits are for infrastructure only - no real accessibility scanning occurs.**
 
-1. **Parallel Processing** - Oobee scans run alongside Unlighthouse without interference
-2. **Consistent Configuration** - Shared configuration patterns with existing tools
-3. **Artifact Management** - Results are collected and preserved
-4. **CI Integration** - Smooth pipeline integration with existing workflows
-5. **Scalability** - Ready to extend to all agencies once real implementation is complete
+This proof-of-concept demonstrates:
 
-## Known Issues
+1. **Parallel Processing Infrastructure** - Framework for running scans alongside Unlighthouse
+2. **Consistent Configuration** - Shared configuration patterns with existing tools  
+3. **Artifact Management** - Results collection and preservation system
+4. **CI Integration** - Pipeline integration ready for real scanner
+5. **Simulation Framework** - Complete mock data generation for testing
 
-- **Package Build Error** - Oobee npm package has TypeScript compilation issues
+**What's Missing: Actual accessibility scanning capabilities**
+
+## Known Issues - BLOCKERS
+
+### 🚨 Critical Issues (Block Real Usage)
+- **OOBEE CLI Does Not Execute** - Scanner fails to run, hangs silently when called
+- **No Real Accessibility Scanning** - All results are simulated/fake
+- **Package Runtime Issues** - Even after successful build, CLI doesn't function
+
+### 🟡 Minor Issues  
 - **Java Dependency** - PDF scanning requires Java/VeraPDF (not critical for HTML scanning)
 - **Timeout Command** - macOS doesn't have `timeout` by default (handled gracefully)
 
-All issues have workarounds implemented and don't block the integration concept validation.
+**IMPORTANT: The critical issues prevent any real accessibility scanning. This is infrastructure-only until OOBEE CLI execution is fixed.**
